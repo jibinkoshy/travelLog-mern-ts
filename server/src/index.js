@@ -22,7 +22,7 @@ app.use(
     origin: process.env.CORS_ORIGIN,
   })
 );
-app.use(express.json()); // This is used to parde the json request body
+app.use(express.json()); // This is used to parse the json request body
 
 app.get('/', (req, res) => {
   res.json({

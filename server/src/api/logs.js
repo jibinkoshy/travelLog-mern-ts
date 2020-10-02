@@ -26,4 +26,14 @@ router.post('/', async (req, res, next) => {
   }
 });
 
+router.delete('/', async (req, res, next) => {
+  try {
+    const logToDelete = req.body;
+    const entries = await LogEntry.findByIdAndDelete(logToDelete.id);
+    res.json(entries);
+  } catch (error) {
+    next(error);
+  }
+});
+
 module.exports = router;

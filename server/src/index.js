@@ -6,24 +6,31 @@ const mongoose = require('mongoose');
 
 require('dotenv').config();
 const middlewares = require('./middleware');
+const logs = require('./api/logs');
 
 const app = express();
 
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+mongoose.connect(process.env.DATABASE_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
-app.use(morgan('common'));
-app.use(helmet());
+app.use(morgan('common')); // used for log information
+app.use(helmet()); // for adding additional security
 app.use(
   cors({
     origin: process.env.CORS_ORIGIN,
   })
 );
+app.use(express.json()); // This is used to parde the json request body
 
 app.get('/', (req, res) => {
   res.json({
     message: 'Hello World!',
   });
 });
+
+app.use('/api/logs', logs);
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);

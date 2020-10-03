@@ -8,5 +8,14 @@ body {
 }
 
 .marker {
-  stroke: yellow;
+  /* stroke: yellow; */
+  transform: translate(-50%, -100%);
+}
+
+.marker.red path {
+  fill: #f05305;
+}
+
+.marker.yellow path {
+  fill: #f3b73e;
 }

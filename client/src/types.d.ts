@@ -10,3 +10,12 @@ interface logEntries {
   createdAt: date;
   updatedAt: date;
 }
+
+interface showPopup {
+  _id?: string;
+}
+
+interface addEntryLocation {
+  latitude: number;
+  longitude: number;
+}

@@ -6,3 +6,7 @@ body {
   height: 100vh;
   width: 100vh;
 }
+
+.marker {
+  stroke: yellow;
+}

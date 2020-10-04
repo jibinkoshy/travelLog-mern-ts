@@ -19,3 +19,18 @@ body {
 .marker.yellow path {
   fill: #f3b73e;
 }
+
+.popup {
+  width: 20vw;
+  padding: 1rem;
+}
+
+.entry-form label,
+.entry-form input,
+.entry-form textarea,
+.entry-form button {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  display: block;
+  width: 100%;
+}

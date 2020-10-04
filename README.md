@@ -2,7 +2,11 @@
 
 - A full stack application to store / list places you have traveled
 
-![image](https://user-images.githubusercontent.com/20209497/94983958-d1a61100-050c-11eb-98bc-4ab54a819964.png)
+![image](https://user-images.githubusercontent.com/20209497/95016391-5598ef80-0618-11eb-85e9-011bb3b7e53d.png)
+
+![image](https://user-images.githubusercontent.com/20209497/95016353-19fe2580-0618-11eb-880c-25d77a95b2dc.png)
+
+![image](https://user-images.githubusercontent.com/20209497/95016375-3f8b2f00-0618-11eb-98a6-4dd5077988a0.png)
 
 # POSTMAN GET LogEntries
 

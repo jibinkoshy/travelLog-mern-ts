@@ -12,6 +12,10 @@ body {
   transform: translate(-50%, -100%);
 }
 
+.error {
+  color: #f05305;
+}
+
 .marker.red path {
   fill: #f05305;
 }
@@ -23,6 +27,14 @@ body {
 .popup {
   width: 20vw;
   padding: 1rem;
+}
+
+.popup img {
+  height: 200px;
+  width: auto;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
 }
 
 .entry-form label,

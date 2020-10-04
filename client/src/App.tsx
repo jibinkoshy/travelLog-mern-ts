@@ -15,12 +15,14 @@ const App: React.FC = () => {
     longitude: -95.665,
     zoom: 3,
   });
+
+  const getEntries = async () => {
+    const logEntries: logEntries[] = await listLogEntries();
+    setLogEntries(logEntries);
+  };
+
   useEffect(() => {
-    (async () => {
-      const logEntries: logEntries[] = await listLogEntries();
-      setLogEntries(logEntries);
-      console.log('logEntries::', logEntries);
-    })();
+    getEntries();
   }, []);
 
   const showAddMarkerPopup = (event: any) => {
@@ -96,6 +98,9 @@ const App: React.FC = () => {
                 <small>
                   Visited on : {new Date(entry.visitDate).toLocaleDateString()}
                 </small>
+                {entry.image ? (
+                  <img src={entry.image} alt={entry.title} />
+                ) : null}
               </div>
             </Popup>
           ) : null}
@@ -143,7 +148,13 @@ const App: React.FC = () => {
             anchor="top"
           >
             <div className="popup">
-              <LogEntryForm location={addEntryLocation} />
+              <LogEntryForm
+                location={addEntryLocation}
+                onClose={() => {
+                  setAddEntryLocation(null);
+                  getEntries();
+                }}
+              />
             </div>
           </Popup>
         </>

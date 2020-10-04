@@ -143,7 +143,7 @@ const App: React.FC = () => {
             anchor="top"
           >
             <div className="popup">
-              <LogEntryForm />
+              <LogEntryForm location={addEntryLocation} />
             </div>
           </Popup>
         </>

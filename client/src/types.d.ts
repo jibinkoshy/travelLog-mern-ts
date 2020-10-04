@@ -19,3 +19,13 @@ interface addEntryLocation {
   latitude: number;
   longitude: number;
 }
+
+interface logEntryFOrmData {
+  title: string;
+  comments: string;
+  description: string;
+  image: string;
+  visitDate: string;
+  latitude: number;
+  longitude: number;
+}
